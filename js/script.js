@@ -2,23 +2,34 @@ $( "document" ).ready(function() {
 
 
 $('#button').click(function(){
-    console.log('hi')
-    var inputValue = $('.input').val()
-    console.log(inputValue)
+    // console.log('hi')
+    var inputValue = $('.input').val();
+    var pigLatinizedWord = pigLatinizer(inputValue);
+    $('.output').text(pigLatinizedWord);
 
-    var firstLetter=inputValue[0];
-    var vowels=['a','e','o','u'];
+    //console.log(inputValue)
 
-    if (vowels.includes(firstLetter)){
-        return 'starts with vowels'
-    }
+    //var firstLetter = inputValue[0];
+   // var vowels = ['a','e','i','o','u'];
 
-    $('.output').text(inputValue)
+    //if (vowels.includes(firstLetter)){
+      //  var pigLatinizedWord = inputValue + "ay"
+        //$('.output').text(pigLatinizedWord)
+    //inputValue.slice[1] + inputValue[0]+ "ay"
+    //}
+
 
 });
 
+});
 
+function pigLatinizer (inputValue){
 
-})
+    var firstLetter=inputValue[0];
+    var vowels=['a','e','o''u'];
+}
+if (vowels.includes(firstLetter)){
+  return 'starts with vowels'
+}
 
 
